@@ -1,13 +1,17 @@
 const canvas = document.querySelector('.webgl')
 const scene = new THREE.Scene()
 const textureLoader = new THREE.TextureLoader()
+const fov = 10; // field-of-view
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
 }
+const aspect_ratio = (sizes.width / sizes.height);
+const near = 0.1
+const far = 100
 
 // Base camera
-const camera = new THREE.PerspectiveCamera(10, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far)
 camera.position.x = 18
 camera.position.y = 8
 camera.position.z = 20
