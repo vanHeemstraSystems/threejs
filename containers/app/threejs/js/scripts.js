@@ -36,7 +36,7 @@ const geometry = new THREE.BoxGeometry (geometry_height, geometry_width, geometr
 const material = new THREE.MeshPhongMaterial();
 material.color = new THREE.Color(0x0ffff0); // aqua
 const box = new THREE.Mesh(geometry, material);
-scene.add(box); // Not required
+// scene.add(box); // Not required
 
 // Controls
 const controls = new THREE.OrbitControls(camera, canvas);
@@ -74,7 +74,6 @@ const bakedMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
 })
 
-/**
 // Loader
 const loader = new THREE.GLTFLoader()
 //loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
@@ -88,7 +87,6 @@ loader.load('models/model.glb',
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
     }
 )
-*/
 
 window.addEventListener('resize', () =>
 {
