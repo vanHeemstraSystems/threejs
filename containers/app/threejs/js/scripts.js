@@ -28,6 +28,12 @@ const light_position_z = 0
 light.position.set(light_position_x, light_position_y, light_position_z)
 scene.add(light)
 
+// Shapes
+const geometry_height = 10
+const geometry_width = 10
+const geometry_depth = 10
+const geometry = new THREE.BoxGeometry (geometry_height, geometry_width, geometry_depth)
+
 // Controls
 const controls = new THREE.OrbitControls(camera, canvas)
 controls.enableDamping = true
