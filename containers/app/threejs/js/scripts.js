@@ -22,7 +22,7 @@ const color = "white";
 const intensity = 100;
 const light = new THREE.DirectionalLight(color, intensity)
 
-//Controls
+// Controls
 const controls = new THREE.OrbitControls(camera, canvas)
 controls.enableDamping = true
 controls.enableZoom = true
@@ -56,7 +56,7 @@ const bakedMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
 })
 
-//Loader
+// Loader
 const loader = new THREE.GLTFLoader()
 //loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
 loader.load('models/model.glb',	
