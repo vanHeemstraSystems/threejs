@@ -33,6 +33,10 @@ const geometry_height = 10
 const geometry_width = 10
 const geometry_depth = 10
 const geometry = new THREE.BoxGeometry (geometry_height, geometry_width, geometry_depth)
+const material = new THREE.MeshPhongMaterial()
+material.color = new THREE.Color(0x0ffff0)
+const box = new THREE.Mesh(geometry, material)
+// scene.add(box) // Not required
 
 // Controls
 const controls = new THREE.OrbitControls(camera, canvas)
