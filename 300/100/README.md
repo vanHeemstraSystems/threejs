@@ -18,17 +18,17 @@ The ```Scene``` can then be populated using the ```.add()``` property with eleme
 
 - Light
 
-## Initialize the Scene
+## 100 - Initialize the Scene
 
 See [README.md](./100/README.md)
 
-## Set up the Camera
+## 200 - Set up the Camera
 
 See [README.md](./200/README.md)
 
-## Place the Light
+## 300 - Place the Light
 
-More ...
+See [README.md](./300/README.md)
 
 ## Add a Shape
 
