@@ -1,6 +1,15 @@
+// Canvas
 const canvas = document.querySelector('.webgl');
-const scene = new THREE.Scene();
+
+// Texture Loader
 const textureLoader = new THREE.TextureLoader();
+
+// Scene
+const scene = new THREE.Scene();
+const background = textureLoader.load('images/background.jpg'); 
+scene.background = background; // "black";
+
+// Base camera
 const fov = 10; // field-of-view
 const sizes = {
     width: window.innerWidth,
@@ -9,8 +18,6 @@ const sizes = {
 const aspect_ratio = (sizes.width / sizes.height);
 const near = 0.1;
 const far = 100;
-
-// Base camera
 const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far);
 camera.position.x = 18;
 camera.position.y = 8;
@@ -74,7 +81,7 @@ const bakedMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
 })
 
-// Loader
+// GLTF Loader
 const loader = new THREE.GLTFLoader();
 //loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
 loader.load('models/model.glb',	
@@ -87,11 +94,6 @@ loader.load('models/model.glb',
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
     }
 );
-
-// Scene
-const backgroundLoader = new THREE.TextureLoader();
-const background = backgroundLoader.load('images/background.jpg'); 
-scene.background = background; // "black";
 
 window.addEventListener('resize', () =>
 {
