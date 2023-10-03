@@ -5,8 +5,8 @@ Placing a light source is a crucial part of setting up the scene. It illuminates
 ```
 ...
 // Lights
-const color = "white";
-const intensity = 100;
+const color = "white"
+const intensity = 100
 const light = new THREE.DirectionalLight(color, intensity)
 ...
 ```
@@ -22,10 +22,21 @@ By default, ```light``` is placed at coordinates: (0,0,0). We can set the positi
 ...
 // Lights
 ...
-const light_position_x = 0;
-const light_position_y = 0;
-const light_position_z = 0;
+const light_position_x = 0
+const light_position_y = 0
+const light_position_z = 0
 light.position.set(light_position_x, light_position_y, light_position_z)
+...
+```
+js/scripts.js
+
+We finish by adding it to the scene:
+
+```
+...
+// Lights
+...
+scene.add(light)
 ...
 ```
 js/scripts.js
