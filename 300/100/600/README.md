@@ -19,3 +19,20 @@ controls.maxAzimuthAngle = Math.PI / 2.5;
 **Note**: ```camera``` and ```canvas``` have been defined earlier.
 
 These controls allow us to rotate the canvas and zoom in and out of the canvas with the mouse.
+
+## Advanced controls
+
+To scale and centralize the canvas in response to the resizing of the browser window, an event listener can be applied, as follows:
+
+```
+window.addEventListener('resize', () =>
+{
+    sizes.width = window.innerWidth
+    sizes.height = window.innerHeight
+    camera.aspect = sizes.width / sizes.height
+    camera.updateProjectionMatrix()
+    renderer.setSize(sizes.width, sizes.height)
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+})
+```
+js/scripts.js

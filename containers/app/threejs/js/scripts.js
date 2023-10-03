@@ -63,7 +63,6 @@ renderer.outputEncoding = THREE.sRGBEncoding
 
 // renderer.render(scene, camera); // See Animation
 
-/**
 // Materials
 // const bakedTexture = textureLoader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/baked.jpg')
 const bakedTexture = textureLoader.load('images/baked.jpg')
@@ -75,6 +74,7 @@ const bakedMaterial = new THREE.MeshBasicMaterial({
     side: THREE.DoubleSide,
 })
 
+/**
 // Loader
 const loader = new THREE.GLTFLoader()
 //loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
@@ -88,24 +88,28 @@ loader.load('models/model.glb',
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
     }
 )
-
+*/
 
 window.addEventListener('resize', () =>
 {
-    sizes.width = window.innerWidth
-    sizes.height = window.innerHeight
-    camera.aspect = sizes.width / sizes.height
-    camera.updateProjectionMatrix()
-    renderer.setSize(sizes.width, sizes.height)
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
+    sizes.width = window.innerWidth;
+    sizes.height = window.innerHeight;
+    camera.aspect = sizes.width / sizes.height;
+    camera.updateProjectionMatrix();
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
 })
-*/
 
 // Animation
-const renderFunction = () => {
-    controls.update()
+const animate = () => {
+    // Update controls
+    controls.update();
+    // Auto-rotation (optional)
+    box.rotation.x += 0.01;
+    box.rotation.y += 0.01;
+    // Render
     renderer.render(scene, camera);
-    window.requestAnimationFrame(renderFunction)
+    window.requestAnimationFrame(animate);
 };
 
-renderFunction();
+animate();

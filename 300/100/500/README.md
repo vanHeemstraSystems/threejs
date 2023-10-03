@@ -64,4 +64,4 @@ js/scripts.js
 
 This method takes the ```scene``` we created and the ```camera``` as parameters. 
 
-**Note**: the ```render``` function, when using animation, will be called from within the animation function (here: tick) instead.
+**Note**: the ```render``` function, when using animation, will be called from within the animation function (here: animate) instead.

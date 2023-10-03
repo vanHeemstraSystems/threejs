@@ -4,20 +4,28 @@ If we are creating a scene with moving objects, we need to create a function tha
 
 ```
 // Animation
-const renderFunction = () => {
+const animate = () => {
     // Update controls
-    controls.update()
+    controls.update();
+
+    // Auto-rotation (optional)
+    box.rotation.x += 0.01;
+	box.rotation.y += 0.01;
 
     // Render
-    renderer.render(scene, camera)
+    renderer.render(scene, camera);
 
     // Call function again on the next frame
-    window.requestAnimationFrame(renderFunction)
+    window.requestAnimationFrame(animate);  
 }
 ```
 
-Call the render function on page load.
+Call the animate function on page load.
 
 ```
-renderFunction();
+animate();
 ```
+
+Auto-rotation, which is optional, adds rotation on the x and y axes of the cube.
+
+Follow this [link](https://www.educative.io/answers/how-to-rotate-an-object-on-its-own-axis-in-threejs) to learn how to make an object rotate about its own axis.

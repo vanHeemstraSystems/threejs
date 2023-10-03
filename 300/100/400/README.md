@@ -67,3 +67,40 @@ scene.add(box);
 ...
 ```
 js/scripts.js
+
+## Advanced Materials
+
+One can render materials in an external tool (such as Blender) and have the texture wrapped around the geometry.
+
+```
+// Materials
+// const bakedTexture = textureLoader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/baked.jpg')
+const bakedTexture = textureLoader.load('images/baked.jpg')
+bakedTexture.flipY = false
+bakedTexture.encoding = THREE.sRGBEncoding
+
+const bakedMaterial = new THREE.MeshBasicMaterial({
+    map: bakedTexture,
+    side: THREE.DoubleSide,
+})
+```
+js/scripts.js
+
+The material can then be combined with a model as follows:
+
+```
+// Loader
+const loader = new THREE.GLTFLoader()
+//loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
+loader.load('models/model.glb',	
+    (gltf) => {
+        const model = gltf.scene
+        model.traverse( child => child.material = bakedMaterial )
+        scene.add(model)
+    },
+    ( xhr ) => {
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
+    }
+)
+```
+js/scripts.js
