@@ -10,10 +10,6 @@ const aspect_ratio = (sizes.width / sizes.height);
 const near = 0.1;
 const far = 100;
 
-// Scene
-const background = loader.load('images/background.png'); 
-scene.background = background; // "black";
-
 // Base camera
 const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far);
 camera.position.x = 18;
@@ -91,6 +87,11 @@ loader.load('models/model.glb',
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
     }
 );
+
+// Scene
+const backgroundLoader = new THREE.TextureLoader();
+const background = backgroundLoader.load('images/background.jpg'); 
+scene.background = background; // "black";
 
 window.addEventListener('resize', () =>
 {

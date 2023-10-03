@@ -20,3 +20,13 @@ material.map = texture;
 js/scripts.js
 
 Here, we use ```map```. However, many methods can be used to apply texture.
+
+We can use TextureLoader for loading a background image for our scene, like so:
+
+```
+// Scene
+const backgroundLoader = new THREE.TextureLoader();
+const background = backgroundLoader.load('images/background.jpg'); 
+scene.background = background; // "black";
+```
+js/scripts.js
