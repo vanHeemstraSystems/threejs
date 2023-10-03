@@ -10,6 +10,10 @@ const aspect_ratio = (sizes.width / sizes.height);
 const near = 0.1;
 const far = 100;
 
+// Scene
+const background = loader.load('images/background.png'); 
+scene.background = background; // "black";
+
 // Base camera
 const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far);
 camera.position.x = 18;
@@ -75,7 +79,7 @@ const bakedMaterial = new THREE.MeshBasicMaterial({
 })
 
 // Loader
-const loader = new THREE.GLTFLoader()
+const loader = new THREE.GLTFLoader();
 //loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
 loader.load('models/model.glb',	
     (gltf) => {
@@ -86,7 +90,7 @@ loader.load('models/model.glb',
     ( xhr ) => {
 		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
     }
-)
+);
 
 window.addEventListener('resize', () =>
 {
@@ -96,7 +100,7 @@ window.addEventListener('resize', () =>
     camera.updateProjectionMatrix();
     renderer.setSize(sizes.width, sizes.height);
     renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
-})
+});
 
 // Animation
 const animate = () => {
