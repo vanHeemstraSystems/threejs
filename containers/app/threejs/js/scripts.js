@@ -22,6 +22,11 @@ const color = "white";
 const intensity = 100;
 const light = new THREE.DirectionalLight(color, intensity)
 
+const light_position_x = 0;
+const light_position_y = 0;
+const light_position_z = 0;
+light.position.set(light_position_x, light_position_y, light_position_z)
+
 // Controls
 const controls = new THREE.OrbitControls(camera, canvas)
 controls.enableDamping = true
