@@ -17,6 +17,11 @@ camera.position.y = 8
 camera.position.z = 20
 scene.add(camera)
 
+// Lights
+const color = "white";
+const intensity = 100;
+const light = new THREE.DirectionalLight(color, intensity)
+
 //Controls
 const controls = new THREE.OrbitControls(camera, canvas)
 controls.enableDamping = true
