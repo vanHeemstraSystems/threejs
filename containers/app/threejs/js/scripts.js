@@ -4,12 +4,37 @@ const canvas = document.querySelector('.webgl');
 // Texture Loader
 const textureLoader = new THREE.TextureLoader();
 
+// Materials
+// const bakedTexture = textureLoader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/baked.jpg')
+const bakedTexture = textureLoader.load('images/baked.jpg')
+bakedTexture.flipY = false
+bakedTexture.encoding = THREE.sRGBEncoding
+
+const bakedMaterial = new THREE.MeshBasicMaterial({
+    map: bakedTexture,
+    side: THREE.DoubleSide,
+})
+
+// GLTF Loader
+const loader = new THREE.GLTFLoader();
+//loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
+loader.load('models/model.glb',	
+    (gltf) => {
+        const model = gltf.scene
+        model.traverse( child => child.material = bakedMaterial )
+        scene.add(model)
+    },
+    ( xhr ) => {
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
+    }
+);
+
 // Scene
 const scene = new THREE.Scene();
 const background = textureLoader.load('images/background.jpg'); 
 scene.background = background; // "black";
 
-// Base camera
+// Base Camera
 const fov = 10; // field-of-view
 const sizes = {
     width: window.innerWidth,
@@ -70,30 +95,7 @@ renderer.outputEncoding = THREE.sRGBEncoding
 
 // renderer.render(scene, camera); // See Animation
 
-// Materials
-// const bakedTexture = textureLoader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/baked.jpg')
-const bakedTexture = textureLoader.load('images/baked.jpg')
-bakedTexture.flipY = false
-bakedTexture.encoding = THREE.sRGBEncoding
-
-const bakedMaterial = new THREE.MeshBasicMaterial({
-    map: bakedTexture,
-    side: THREE.DoubleSide,
-})
-
-// GLTF Loader
-const loader = new THREE.GLTFLoader();
-//loader.load('https://rawcdn.githack.com/ricardoolivaalonso/ThreeJS-Room05/ae27bdffd31dcc5cd5a919263f8f1c6874e05400/model.glb',
-loader.load('models/model.glb',	
-    (gltf) => {
-        const model = gltf.scene
-        model.traverse( child => child.material = bakedMaterial )
-        scene.add(model)
-    },
-    ( xhr ) => {
-		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' )
-    }
-);
+// Events
 
 window.addEventListener('resize', () =>
 {
