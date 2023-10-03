@@ -5,10 +5,10 @@ Now we can add a shape to our scene. To create one, we first have to initialize 
 ```
 ...
 // Shapes
-const geometry_height = 10
-const geometry_width = 10
-const geometry_depth = 10
-const geometry = new THREE.BoxGeometry (geometry_height, geometry_width, geometry_depth)
+const geometry_height = 2;
+const geometry_width = 2;
+const geometry_depth = 2;
+const geometry = new THREE.BoxGeometry (geometry_height, geometry_width, geometry_depth);
 ...
 ```
 js/scripts.js
@@ -24,7 +24,7 @@ Then, we choose the material:
 ```
 // Shapes
 ...
-const material = new THREE.MeshPhongMaterial()
+const material = new THREE.MeshPhongMaterial();
 ...
 ```
 js/scripts.js
@@ -38,7 +38,7 @@ Any kind of material we use inherits directly from the ```Material``` class. Thi
 ```
 // Shapes
 ...
-material.color = new THREE.Color(0x0ffff0)
+material.color = new THREE.Color(0x0ffff0); // aqua
 ...
 ```
 js/scripts.js
@@ -50,7 +50,7 @@ Now we use the mesh to create the shape we need:
 ```
 // Shapes
 ...
-const box = new THREE.Mesh(geometry, material)
+const box = new THREE.Mesh(geometry, material);
 ...
 ```
 js/scripts.js
@@ -63,7 +63,7 @@ Finally, we add the shape to our scene:
 ```
 // Shapes
 ...
-scene.add(box)
+scene.add(box);
 ...
 ```
 js/scripts.js

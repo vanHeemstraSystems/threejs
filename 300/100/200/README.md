@@ -2,7 +2,7 @@
 
 ```
 // Base camera
-const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far)
+const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far);
 ```
 
 We do the following in the code above:
@@ -13,7 +13,7 @@ We do the following in the code above:
 
 ```
 ...
-const fov = 10
+const fov = 10;
 ...
 ```
 js/scripts.js
@@ -23,7 +23,7 @@ js/scripts.js
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
-}
+};
 const aspect_ratio = (sizes.width / sizes.height);
 
 // this can be passed as a parameter 
@@ -38,8 +38,8 @@ js/scripts.js
 
 ```
 ...
-const near = 0.1
-const far = 100
+const near = 0.1;
+const far = 100;
 ...
 ```
 js/scripts.js
@@ -47,13 +47,13 @@ js/scripts.js
 The position of the camera can be set as shown below:
 
 ```
-camera.position.x = 18
-camera.position.y = 8
-camera.position.z = 20
+camera.position.x = 18;
+camera.position.y = 8;
+camera.position.z = 20;
 
 // or we can use a Vector3
 
-// camera.position.set(18,8,20)
+// camera.position.set(18,8,20);
 ```
 js/scripts.js
 
@@ -62,28 +62,28 @@ By default, the objects are placed at the center of the plane.
 Lastly, we add the camera to the scene:
 
 ```
-scene.add(camera)
+scene.add(camera);
 ```
 js/scripts.js
 
 So far we have the following:
 
 ```
-const scene = new THREE.Scene()
+const scene = new THREE.Scene();
 const fov = 10; // field-of-view
 const sizes = {
     width: window.innerWidth,
     height: window.innerHeight
-}
+};
 const aspect_ratio = (sizes.width / sizes.height);
-const near = 0.1
-const far = 100
+const near = 0.1;
+const far = 100;
 
 // Base camera
-const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far)
-camera.position.x = 18
-camera.position.y = 8
-camera.position.z = 20
-scene.add(camera)
+const camera = new THREE.PerspectiveCamera(fov, aspect_ratio, near, far);
+camera.position.x = 18;
+camera.position.y = 8;
+camera.position.z = 20;
+scene.add(camera);
 ```
 js/scripts.js
