@@ -6,4 +6,7 @@ Based on "Part 3-Blender Beginner Tutorial (Modelling the House)" at https://www
 
 Based on "An Advanced Material" at https://github.khronos.org/glTF-Tutorials/gltfTutorial/gltfTutorial_014_AdvancedMaterial.html
 
-Based on "Blender to 3D website in minutes for free: Free tutorial 1, getting started" at https://www.youtube.com/watch?v=-FZoNIGU47Y
+Based on "Blender to 3D website in minutes for free: Free tutorial 1, getting started" at https://www.youtube.com/watch?v=-FZoNIGU47Y and repo at https://github.com/benjaminmiles
+
+
+
