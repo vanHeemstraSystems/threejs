@@ -11,6 +11,8 @@ Based on "How to Import a 3D Blender Object into a Three.js Project as a glTF Fi
 
 Based on "Blender to 3D website in minutes for free: Free tutorial 1, getting started" at https://www.youtube.com/watch?v=-FZoNIGU47Y
 
+Based on "Blender 3D Beginner Tutorial: Smooth 3D Living Room" at https://www.youtube.com/watch?v=dEGJeVnWZAA
+
 # 100 - Introduction
 
 See [README.md](./100/README.md)
