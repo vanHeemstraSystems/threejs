@@ -1,11 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import { Canvas } from '@react-three/fiber'
 import './App.css'
+import { Experience } from './components/Experience'
 
 function App() {
 
   return (
-
+    <Canvas>
+      <Experience />
+    </Canvas>
   )
 }
 
