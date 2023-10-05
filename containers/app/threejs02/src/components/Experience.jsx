@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei"
+import { OrbitControls, ScrollControls } from "@react-three/drei"
 import { Office } from "./Office"
 
 export const Experience = () => {
@@ -6,7 +6,9 @@ export const Experience = () => {
         <>
             <ambientLight intensity={1} />
             <OrbitControls />
-            <Office />
+            <ScrollControls pages={3} damping={0.25}>
+                <Office />
+            </ScrollControls>
         </>
     )
 }
