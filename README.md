@@ -15,6 +15,8 @@ Based on "Blender 3D Beginner Tutorial: Smooth 3D Living Room" at https://www.yo
 
 Based on "Blender 3D - Create a 3D Isometric BEDROOM in 15 minutes | Beginner Tutorial" at https://www.youtube.com/watch?v=yCHT23A6aJA
 
+Based on "React Three Fiber tutorial - Scroll Animations" at https://www.youtube.com/watch?v=pXpckHDDNYo
+
 # 100 - Introduction
 
 See [README.md](./100/README.md)
