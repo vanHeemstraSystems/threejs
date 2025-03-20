@@ -17,6 +17,8 @@ Based on "Blender 3D - Create a 3D Isometric BEDROOM in 15 minutes | Beginner Tu
 
 Based on "React Three Fiber tutorial - Scroll Animations" at https://www.youtube.com/watch?v=pXpckHDDNYo
 
+Based on "Three.js Optimization - Best Practices and Techniques" at https://www.youtube.com/watch?v=dc5iJVInpPY
+
 # 100 - Introduction
 
 See [README.md](./100/README.md)
